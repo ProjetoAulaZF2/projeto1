@@ -24,10 +24,10 @@ Dentro dele será necessário você instalar as bibliotecas, você pode fazê-lo
 
 	$ php composer.phar self-update
 
-Resultado : 
-Updating to version 0c85ca426d6e8235366340f29ad0e6aab1747b83.
-    Downloading: 100%         
-Use composer self-update --rollback to return to version 7adc41d02c3536b3e19a6b906cf0c4cf6d3beb70
+	Resultado : 
+	Updating to version 0c85ca426d6e8235366340f29ad0e6aab1747b83.
+	    Downloading: 100%         
+	Use composer self-update --rollback to return to version 7adc41d02c3536b3e19a6b906cf0c4cf6d3beb70
 
 Logo após execute o seguinte comando:
 
