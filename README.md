@@ -33,14 +33,14 @@ Logo após execute o seguinte comando:
 
 	$ php composer.phar install
 
-Resultado:
-Loading composer repositories with package information
-Installing dependencies (including require-dev)
-  - Installing zendframework/zendxml (1.0.0)
-    Loading from cache
+	Resultado:
+	Loading composer repositories with package information
+	Installing dependencies (including require-dev)
+	  - Installing zendframework/zendxml (1.0.0)
+	    Loading from cache
 
-  - Installing zendframework/zendframework (2.3.1)
-    Loading from cache
+	  - Installing zendframework/zendframework (2.3.1)
+	    Loading from cache
 
 
 
