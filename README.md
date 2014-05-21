@@ -42,6 +42,22 @@ Logo após execute o seguinte comando:
 	  - Installing zendframework/zendframework (2.3.1)
 	    Loading from cache
 
+### Configurações do Apache
+
+Configure o seu virtual host com o seguinte código:
+
+    <VirtualHost *:80>
+        ServerName projeto.local
+        DocumentRoot /path/to/projeto1/public
+        SetEnv APPLICATION_ENV "development"
+        <Directory /path/to/projeto1/public>
+            DirectoryIndex index.php
+            AllowOverride All
+            Order allow,deny
+            Allow from all
+        </Directory>
+    </VirtualHost>
+
 
 
 
