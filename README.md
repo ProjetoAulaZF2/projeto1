@@ -58,6 +58,57 @@ Configure o seu virtual host com o seguinte código:
         </Directory>
     </VirtualHost>
 
+Controllers e Actions
+-----------------------
+
+Vamos lá, temos que criar nossa primeira controller, mas como eu faço isso?
+Muito simples, vamos criar uma nova controller dentro do diretório 
+projeto1/module/Application/src/Application/Controller/OutraController.php com o seguinte código:
+
+	<?php
+
+	namespace Application\Controller;
+
+	use Zend\Mvc\Controller\AbstractActionController;
+	use Zend\View\Model\ViewModel;
+
+	class OutraController extends AbstractActionController
+	{
+		
+	    public function indexAction()
+	    {
+		return new ViewModel();
+	    }
+	    //Nossa segunda action, vamos brincar um pouco com ela quando utilizar-mos algumas configurações de rotas 	    
+	    public function outraAction()
+	    {
+	    	
+	    }
+	}
+
+Como agora existe uma outra Action, precisamos criar o seu arquivo também, então vamos lá no diretório 
+projeto1/module/Application/view/application/outra/outra.phtml com o seguinte código:
+
+	Essa é a outra action onde ficará o nosso html
+
+Para que a nossa controller funcione normalmente é necessário configurar ela no arquivo 
+projeto1/module/Application/config/module.config.php
+
+
+	'controllers' => array(
+		'invokables' => array(
+		    'Application\Controller\Index' => 'Application\Controller\IndexController',
+		    //Adicione essa linha abaixo no array de invokables	
+		    'Application\Controller\Outra' => 'Application\Controller\OutraController',		
+		),
+	    ),
+
+Pronto! Assim já conseguiremos utilizar nossa nova controller com a seguinte url http://projeto.local/application/outra
+Para acessar-mos a Action outra.phtml, basta colocarmos o link http://projeto.local/application/outra/outra.
+
+Criando outro Módulo e configurano Rotas
+-----------------------------------------
+
 
 
 
