@@ -106,7 +106,7 @@ projeto1/module/Application/config/module.config.php
 Pronto! Assim já conseguiremos utilizar nossa nova controller com a seguinte url http://projeto.local/application/outra
 Para acessarmos a Action outra.phtml, basta colocarmos o link http://projeto.local/application/outra/outra.
 
-Criando outro Módulo e configurano Rotas
+Criando outro Módulo e configurando Rotas
 -----------------------------------------
 
 
