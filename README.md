@@ -30,7 +30,7 @@ Dentro dele será necessário você instalar as bibliotecas, você pode fazê-lo
 	Use composer self-update --rollback to return to version 7adc41d02c3536b3e19a6b906cf0c4cf6d3beb70
 
 Logo após execute o seguinte comando:
-
+~~~shell
 	$ php composer.phar install
 
 	Resultado:
@@ -41,7 +41,7 @@ Logo após execute o seguinte comando:
 
 	  - Installing zendframework/zendframework (2.3.1)
 	    Loading from cache
-
+~~~
 ### Configurações do Apache
 
 Configure o seu virtual host com o seguinte código:
@@ -64,7 +64,7 @@ Controllers e Actions
 Vamos lá, temos que criar nossa primeira controller, mas como eu faço isso?
 Muito simples, vamos criar uma nova controller dentro do diretório 
 projeto1/module/Application/src/Application/Controller/OutraController.php com o seguinte código:
-
+~~~php
 	<?php
 
 	namespace Application\Controller;
@@ -85,7 +85,7 @@ projeto1/module/Application/src/Application/Controller/OutraController.php com o
 	    	
 	    }
 	}
-
+~~~
 Como agora existe uma outra Action, precisamos criar o seu arquivo também, então vamos lá no diretório 
 projeto1/module/Application/view/application/outra/outra.phtml com o seguinte código:
 
@@ -94,7 +94,7 @@ projeto1/module/Application/view/application/outra/outra.phtml com o seguinte c�
 Para que a nossa controller funcione normalmente é necessário configurar ela no arquivo 
 projeto1/module/Application/config/module.config.php
 
-
+~~~php
 	'controllers' => array(
 		'invokables' => array(
 		    'Application\Controller\Index' => 'Application\Controller\IndexController',
@@ -102,7 +102,7 @@ projeto1/module/Application/config/module.config.php
 		    'Application\Controller\Outra' => 'Application\Controller\OutraController',		
 		),
 	    ),
-
+~~~
 Pronto! Assim já conseguiremos utilizar nossa nova controller com a seguinte url http://projeto.local/application/outra
 Para acessarmos a Action outra.phtml, basta colocarmos o link http://projeto.local/application/outra/outra.
 
